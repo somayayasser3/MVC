@@ -1,0 +1,26 @@
+﻿@model List<CourseViewModel>
+@{
+    ViewData["Title"] = "Courses";
+}
+<h1>All Courses</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Course Name</th>
+        <th>Degree</th>
+        <th>Minimum Degree</th>
+        <th>Hours</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Degree</td>
+                    <td>@item.MinDegree</td>
+                    <td>@item.Hours</td>
+                    <td><a href="@Url.Action("Trainees", "Course", new { id = item.Id })" class="btn btn-primary">
+                    Show Trainees
+                    </a>
+                    </td>
+                </tr>
+    }
+</table>

@@ -1,0 +1,87 @@
+﻿@model InstructorInfo
+@{
+    ViewData["Title"] = "Details";
+}
+@* <table class="table table-bordered table-hover">
+    <tr>
+         <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Course Name</th>
+        <th>Address</th>
+        <th>Deraptment Name</th>
+        <th>Image</th>
+    </tr>
+    <tr>
+         <td>@Model.InstructorName</td>
+         <td>@Model.Salary</td>
+         <td>@Model.CourseName</td>
+         <td>@Model.Address</td>
+         <td>@Model.DepartmentName</td>
+         <td><img src="/Images/@Model.InstructorImag" style="width: 50px; height: 50px; object-fit: cover;" alt="Instructor Image"/></td>
+   </tr>
+</<table> *@
+<environment include="Development">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Details.css" /> 
+</environment>
+<div class="container">
+    <div class="instructor-card">
+        <div class="row g-0">
+            <!-- Profile Section -->
+            <div class="col-md-4 profile-section d-flex flex-column align-items-center justify-content-center">
+                <img src="/Images/@Model.InstructorImag" )" alt="Instructor" class="instructor-img"/>
+                <h2 class="text-center mb-1">@Model.InstructorName</h2>
+                <p class="text-center opacity-75 mb-3">Instructor</p>
+            </div>
+
+            <!-- Details Section -->
+            <div class="col-md-8 bg-white p-4">
+                <h3 class="mb-4 border-bottom pb-3">Instructor Information</h3>
+
+                <div class="detail-item d-flex align-items-center">
+                    <div class="detail-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div>
+                        <div class="detail-label">Salary</div>
+                        <div class="detail-value">@Model.Salary</div>
+                    </div>
+                </div>
+
+                <div class="detail-item d-flex align-items-center">
+                    <div class="detail-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div>
+                        <div class="detail-label">Course</div>
+                        <div class="detail-value">@Model.CourseName</div>
+                    </div>
+                </div>
+
+                <div class="detail-item d-flex align-items-center">
+                    <div class="detail-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <div class="detail-label">Address</div>
+                        <div class="detail-value">@Model.Address</div>
+                    </div>
+                </div>
+
+                <div class="detail-item d-flex align-items-center">
+                    <div class="detail-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <div class="detail-label">Department</div>
+                        <div class="detail-value">@Model.DepartmentName</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

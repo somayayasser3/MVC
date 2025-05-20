@@ -13,8 +13,12 @@
       "PackagePath": "staticwebassets\\Images\\m.jpg"
     },
     {
-      "Id": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\Details.css",
-      "PackagePath": "staticwebassets\\css\\Details.css"
+      "Id": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\ItemDetails.css",
+      "PackagePath": "staticwebassets\\css\\ItemDetails.css"
+    },
+    {
+      "Id": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\ResultsStyle.css",
+      "PackagePath": "staticwebassets\\css\\ResultsStyle.css"
     },
     {
       "Id": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\site.css",

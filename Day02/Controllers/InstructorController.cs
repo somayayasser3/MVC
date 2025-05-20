@@ -1,4 +1,5 @@
-﻿using Day02.Models;
+﻿using Day02.BussinessLayer;
+using Day02.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Day02.Controllers
@@ -13,15 +14,15 @@ namespace Day02.Controllers
         public IActionResult Index()
         {
 
-            List<InstructorInfo> InstructorBlList = instructorBl.GetAllInstructors();
-            if(InstructorBlList is null)
+            List<InstructorViewModel> AllInstructors= instructorBl.GetAllInstructors();
+            if(AllInstructors is null)
                 return NotFound();
-            return View("Index",InstructorBlList);
+            return View("Index",AllInstructors);
         }
 
         public IActionResult Details(int id)
         {
-            InstructorInfo instructor = instructorBl.GetInstructorByID(id);
+            InstructorViewModel instructor = instructorBl.GetInstructorByID(id);
             if(instructor == null)
             {
                 return NotFound();

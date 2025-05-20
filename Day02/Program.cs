@@ -1,3 +1,5 @@
+using Day02.BussinessLayer;
+
 namespace Day02
 {
     public class Program
@@ -12,7 +14,9 @@ namespace Day02
             builder.Services.AddDbContext<Day02.Models.UniversityContext>();
 
             // Register InstructorBl with proper scope
-            builder.Services.AddScoped<Day02.Models.InstructorBl>();
+            builder.Services.AddScoped<InstructorBl>();
+            builder.Services.AddScoped<TraineeBL>();
+            builder.Services.AddScoped<CourseBL>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -1,0 +1,33 @@
+﻿@model List<TraineeViewModel>
+@{
+    ViewData["Title"] = "Trainees";
+}
+<environment include="Development">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/ItemDetails.css" /> 
+</environment>
+
+<h1>All Trainees</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Trainee Name</th>
+        <th>Address</th>
+        <th>Image</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+            <tr>
+                <td>@item.TraineeName</td>
+                <td>@item.TraineeAddress</td>
+                <td><img src="/Images/@item.TraineeImag" class="instructor-img"/></td>
+                <td><a href="@Url.Action("Courses", "Trainee", new { id = item.TraineeId })" class="btn btn-primary">
+                Show Courses
+                </a>
+                </td>
+            </tr>
+    }
+</table>
+
+

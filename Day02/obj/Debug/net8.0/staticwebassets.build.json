@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R7FgeAAAyoqhhL/T0CBBL1NmioCJa+gdJiu6cjA5DqY=",
+  "Hash": "rCAMhQWw1RRmhJYKHTJoPD2RGO076xM/dgzUzmcv6NM=",
   "Source": "Day02",
   "BasePath": "_content/Day02",
   "Mode": "Default",
@@ -55,12 +55,12 @@
       "OriginalItemSpec": "D:\\ITI .Net\\MVC\\Day02\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Day02.bundle.scp.css"
     },
     {
-      "Identity": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\Details.css",
+      "Identity": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\ItemDetails.css",
       "SourceId": "Day02",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\",
       "BasePath": "_content/Day02",
-      "RelativePath": "css/Details.css",
+      "RelativePath": "css/ItemDetails.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Details.css"
+      "OriginalItemSpec": "wwwroot\\css\\ItemDetails.css"
+    },
+    {
+      "Identity": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\ResultsStyle.css",
+      "SourceId": "Day02",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\",
+      "BasePath": "_content/Day02",
+      "RelativePath": "css/ResultsStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ResultsStyle.css"
     },
     {
       "Identity": "D:\\ITI .Net\\MVC\\Day02\\wwwroot\\css\\site.css",

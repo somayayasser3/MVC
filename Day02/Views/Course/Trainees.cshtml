@@ -1,0 +1,76 @@
+﻿@model List<Trainee_CourseViewModel>
+@{
+    ViewData["Title"] = "Trainees";
+}
+
+<h1>Trainees</h1>
+
+<environment include="Development">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/itemDetails.css" /> 
+</environment>
+<div class="container mt-4">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-4">
+                Trainees
+                <small class="text-muted">for  @ViewBag.CourseName Course </small>
+            </h1>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!-- Trainees Table -->
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Trainees</h3>
+                </div>
+
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Trainee Name</th>
+                                    <th>Address</th>
+                                    <th>Min Degree</th>
+                                    <th>Image</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                             <tbody>
+                                @foreach (var trainee in Model)
+                                {
+                            <tr>
+                                    <td>@trainee.TraineeName</td>
+                                    <td>@trainee.Address</td>
+                                    <td>@trainee.MinGrade</td>
+                                     <td><img class="instructor-img" src="/Images/@trainee.Imag"/></td>
+                                    <td>
+                                        <span class="badge"
+                                              style="background-color:@trainee.Color;">
+                                                @trainee.status
+                                        </span>
+                                    </td>
+                                    <td><a href="@Url.Action("Results", "Trainee", new { Cid = trainee.CID, Tid = trainee.TID})" class="btn btn-primary">
+                        Show Grade
+                        </a>
+                        </td>
+
+                            </tr>
+                                }
+            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
